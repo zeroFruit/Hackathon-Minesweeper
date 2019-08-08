@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Minesweeper</title>
+		<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+		<script src="libs/jquery.min.js"></script>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<h1>Minesweeper</h1>
+		<div class="container">
+			<div id="loader">
+				<p class="text-center">Loading...</p>
+			</div>
+			<div id="transaction-confirm">
+				<p class="text-center">
+					점수를 남기고 싶다면 메타마스크에서 트랜잭션을 승인해주세요.
+				</p>
+			</div>
+			<div id="content">
+				<div class='menu'>
+					<table class="display display-score"><tr><td>SCORE: 0</td></tr></table>
+					<input id="nickname" class="display" type="text" placeholder="TYPE NICKNAME"/>
+				</div>
+				<div class="menu">
+					<table class="display display-counter"><tr><td>MINES: 0</td></tr></table>
+					<div class="button button-center"></div>
+					<table class="display display-timer"><tr><td>TIME: 0</td></tr></table>
+				</div>
+			</div>
+		</div>
+		<p id="accountAddress" class="text-center"></p>
+		<script src="libs/web3.min.js"></script>
+		<script src="libs/truffle-contract.js"></script>
+		<script src="game.js"></script>
+	</body>
+</html>
